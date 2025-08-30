@@ -4,13 +4,14 @@ import re
 import streamlit as st
 import requests
 
+
 # 안전한 import 경로
 THIS_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.abspath(os.path.join(THIS_DIR, os.pardir))
 if ROOT_DIR not in sys.path:
     sys.path.append(ROOT_DIR)
 
-from services.categories import list_genre_options
+from app.services.categories import list_genre_options
 
 # 면담 고정 순서 및 기본 문항 정의 
 DEFAULT_QUESTIONS = [

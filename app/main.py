@@ -3,11 +3,13 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Dict, List, Optional
 
-from core import nlp
-from core.ranker import rerank
-from core.interview import QUESTIONS, parse_answer
-from services.aladin import get_client, AladinError, AladinClient
-from services.categories import get_category_id
+# app/main.py
+from app.core import nlp
+from app.core.ranker import rerank
+from app.core.interview import QUESTIONS, parse_answer
+from app.services.aladin import get_client, AladinError
+from app.services.categories import get_category_id
+
 
 app = FastAPI(title="SQUIN Book Agent")
 
